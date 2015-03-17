@@ -1,0 +1,33 @@
+.container ul li a + ul { display:none; }
+.container ul li a + ul.open { display:block;}
+.container li.root a { color:#0a0;}
+.container li.root a:hover {color:#0a0;}
+.folderType { text-transform:uppercase;}
+li { 	list-style:none;}
+li:before {
+	content: "";
+	border-color: transparent #0a0;
+	border-style: solid;
+	border-width: 0.35em 0 0.35em 0.45em;
+	border-width:0.35em 0 0.35em 0.45em;
+	display: block;
+	height: 0;
+	width: 0;
+	left: -1em;
+	top: 0.9em;
+	position: relative;
+}
+li.open > a { font-weight:bold;}
+li.open:before {
+	border-width:0.45em 0.35em 0 0.35em;
+	border-color: #0a0 transparent;
+}
+li.fileType:before {
+	border-color:transparent #111;
+	content:"";
+	border:none;
+	top:0;
+}
+li.fileType { margin-top:5px; }
+li.fileType:hover { cursor:pointer; }
+li.fileType span { color:#ccc; }
